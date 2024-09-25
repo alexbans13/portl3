@@ -7,14 +7,19 @@
   <script src="https://cdn.jsdelivr.net/gh/jeromeetienne/AR.js/aframe/build/aframe-ar.min.js"></script>
 </head>
 <body style="margin: 0; overflow: hidden;">
-  <!-- Create an AR scene with A-Frame -->
+  <!-- AR.js Scene -->
   <a-scene embedded arjs>
-    <!-- Add an AR marker -->
-    <a-marker preset="hiro">
-      <!-- Add a 3D box that appears when the marker is detected -->
-      <a-box position='0 0.5 0' material='color: yellow'></a-box>
+    <!-- Custom marker trigger -->
+    <a-marker type="pattern" url="https://your-github-username.github.io/your-repo-name/my-marker.patt">
+      <!-- Overlay the historic image -->
+      <a-image src="https://your-github-username.github.io/your-repo-name/historic-building.jpg"
+               position="0 0 0"  <!-- Adjust as needed -->
+               scale="1 1 1"     <!-- Adjust as needed -->
+               rotation="0 0 0"  <!-- Adjust as needed -->
+               opacity="0.7">    <!-- Adjust transparency -->
+      </a-image>
     </a-marker>
-    <!-- AR camera -->
+    <!-- Camera setup -->
     <a-entity camera></a-entity>
   </a-scene>
 </body>
