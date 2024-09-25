@@ -10,14 +10,9 @@
   <!-- AR.js Scene -->
   <a-scene embedded arjs>
     <!-- Custom marker trigger -->
-    <a-marker type="pattern" url="https://alexbans13.github.io/portl3/my-marker.patt">
-      <!-- Overlay the historic image -->
-      <a-image src="https://alexbans13.github.io/portl3/historic-building.jpg"
-               position="0 0 0"
-               scale="1 1 1"
-               rotation="0 0 0"
-               opacity="0.7">
-      </a-image>
+    <a-marker preset="hiro">
+      <!-- Add a 3D box that appears when the marker is detected -->
+      <a-box position='0 0.5 0' material='color: yellow'></a-box>
     </a-marker>
     <a-entity camera></a-entity>
   </a-scene>
